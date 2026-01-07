@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#7C4DFF</color>
+    <color name="primary_dark">#5E35B1</color>
+    <color name="accent">#00E676</color>
+    <color name="background">#F8F9FA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="card_meditation">#E1BEE7</color>
+    <color name="card_breathing">#B2EBF2</color>
+    <color name="card_journal">#FFE082</color>
+    <color name="card_games">#FFCCBC</color>
+</resources>

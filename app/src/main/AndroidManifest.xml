@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permisos -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MindCare"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+        tools:targetApi="31">
+
+        <!-- Login Activity (Pantalla inicial) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Journal Activity -->
+        <activity
+            android:name=".JournalActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- Breathing Activity -->
+        <activity
+            android:name=".BreathingActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- Games Menu Activity -->
+        <activity
+            android:name=".GamesMenuActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- Bubble Game Activity -->
+        <activity
+            android:name=".BubbleGameActivity"
+            android:exported="false"
+            android:parentActivityName=".GamesMenuActivity"/>
+
+        <!-- Memory Game Activity -->
+        <activity
+            android:name=".MemoryGameActivity"
+            android:exported="false"
+            android:parentActivityName=".GamesMenuActivity"/>
+
+        <!-- Color Game Activity -->
+        <activity
+            android:name=".ColorGameActivity"
+            android:exported="false"
+            android:parentActivityName=".GamesMenuActivity"/>
+
+        <!-- Settings Activity (Configuración de notificaciones) -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".TestNotificationsActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- Meditation Activity -->
+        <activity
+            android:name=".MeditationActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- Meditation Session Activity -->
+        <activity
+            android:name=".MeditationSessionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MeditationActivity"/>
+
+        <!-- Receiver para notificaciones programadas -->
+        <receiver
+            android:name=".NotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.mentalhealthapp.BREATHING_REMINDER"/>
+                <action android:name="com.example.mentalhealthapp.JOURNAL_REMINDER"/>
+                <action android:name="com.example.mentalhealthapp.MOTIVATION"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Receiver para reiniciar notificaciones después de reiniciar el dispositivo -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
