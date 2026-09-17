@@ -46,3 +46,29 @@ MindCare is architected around a strict **local-first privacy model**. All perso
 - **Developers:**
   - Isaac Pardo Gómez
   - Ernesto Jiménez Bernal
+  - ---
+
+## 📲 Download & Installation Guide (Android APK)
+
+Follow these simple steps to install and run the standalone `.apk` build directly on your Android mobile device:
+
+### Step 1: Download the Application
+- Locate the **Releases** section on the right sidebar of this GitHub repository.
+- Click on the latest release tag (e.g., `v1.0.0`).
+- Under the **Assets** dropdown, download the file ending in `.apk` (e.g., `app-release.apk`) directly to your Android device[cite: 2].
+  > *Alternatively: Download it onto your computer and transfer the `.apk` file to your phone's storage via USB or cloud drive.*
+
+### Step 2: Enable Unknown App Installations
+Android restricts sideloading apps outside Google Play by default. To proceed:
+1. Open your device's **Settings** (`Ajustes`).
+2. Navigate to **Security & Privacy** > **Install Unknown Apps** (or search for *"Install unknown apps"* in the settings search bar).
+3. Find the browser or file manager you used to download the file (e.g., **Chrome** or **My Files / Mis Archivos**).
+4. Toggle the switch to **Allow from this source** (`Permitir desde esta fuente`).
+
+### Step 3: Run the Installer
+1. Open your phone's **Files / Downloads** app and tap on the downloaded `.apk` file.
+2. When prompted by the system dialog, tap **Install** (`Instalar`).
+3. If **Google Play Protect** displays a warning (*"Unrecognized developer"*), tap **More details** (`Más detalles`) followed by **Install anyway** (`Instalar de todas formas`).
+
+### Step 4: Open and Launch
+- Once the installation finishes, tap **Open** (`Abrir`) or find the application icon on your home screen or app drawer to start using the app.
